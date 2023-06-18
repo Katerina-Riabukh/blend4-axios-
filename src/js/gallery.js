@@ -3,6 +3,7 @@ import createGalleryCard from '../templates/gallery-card.hbs'
 import refs from './refs'
 import Pagination from 'tui-pagination'
 import 'tui-pagination/dist/tui-pagination.css'
+import onCheckboxClick from './isChangeTheme'
 
 /**
   |============================
@@ -22,6 +23,9 @@ import 'tui-pagination/dist/tui-pagination.css'
   | Якщо у нас залишився час, давате підключимо перемикач теми. Він знаходиться у файлі "isChangeTheme.js".
   |============================
 */
+
+refs.themeSwitch.addEventListener('change', onCheckboxClick)
+
 refs.form.addEventListener('submit', onSearchFormSubmit);
 
 const options = { 

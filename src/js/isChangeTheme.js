@@ -9,6 +9,7 @@ const Theme = {
 const STORAGE_KEY = 'theme';
 
 export default function onCheckboxClick(evt) {
+  console.log('hello toggle');
   let value = '';
   if (evt.currentTarget.checked) {
     value = Theme.DARK;
